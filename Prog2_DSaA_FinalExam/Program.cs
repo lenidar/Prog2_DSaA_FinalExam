@@ -58,6 +58,12 @@ namespace Prog2_DSaA_FinalExam
             return uInput;
         }
 
+        /// <summary>
+        /// This method initializes all letter locations
+        /// The initial location being 0
+        /// </summary>
+        /// <param name="loc"> the location array </param>
+        /// <returns> returns the location array but with 0s </returns>
         static int[] initializeLetterLocations(int[] loc)
         {
             for (int x = 0; x < loc.Length; x++)
@@ -66,6 +72,13 @@ namespace Prog2_DSaA_FinalExam
             return loc;
         }
 
+        /// <summary>
+        /// Updates the letters coordinate location
+        /// </summary>
+        /// <param name="sequenceNumber"> how many animation passes have been animated </param>
+        /// <param name="letterLoc"> current location coordinates of letters </param>
+        /// <param name="windowHeight"> the window height of the display </param>
+        /// <returns> returns the updated location coordinates </returns>
         static int[] updateLetterLocation(int sequenceNumber, int[] letterLoc, int windowHeight)
         {
             for(int x = 0; x < sequenceNumber; x++)
@@ -77,6 +90,11 @@ namespace Prog2_DSaA_FinalExam
             return letterLoc;
         }
 
+        /// <summary>
+        /// Display of the letters
+        /// </summary>
+        /// <param name="word"> the word is what is going to be animated </param>
+        /// <param name="letterLoc"> coordinate location of each letter </param>
         static void displayLetters(string word, int[] letterLoc) 
         {
             for(int x = 0; x < letterLoc.Length;x++)
@@ -86,6 +104,12 @@ namespace Prog2_DSaA_FinalExam
             }
         }
 
+        /// <summary>
+        /// Checks if all the letters have been animated 
+        /// </summary>
+        /// <param name="letterLoc"> coordinate location of each letter </param>
+        /// <param name="windowHeight"> the window height of the animation </param>
+        /// <returns></returns>
         static bool animationFinished(int[] letterLoc, int windowHeight)
         {
             for(int x =0; x < letterLoc.Length; x++)
