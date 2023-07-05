@@ -41,6 +41,11 @@ namespace Prog2_DSaA_FinalExam
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Takes user input
+        /// </summary>
+        /// <param name="maxLen"> The max acceptable length </param>
+        /// <returns> returns the string if within the acceptable length </returns>
         static string takeUserInput(int maxLen)
         {
             string uInput = "";
